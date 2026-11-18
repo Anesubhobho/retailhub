@@ -18,7 +18,7 @@ import {
 
 import { supabase } from '../../services/supabase'
 import { useAuth } from '../../context/AuthContext'
-import StatCard from '../../components/StatCard'
+import StatCard from "../../components/statcard";
 import LowStockAlerts from '../../components/LowStockAlerts'
 
 
