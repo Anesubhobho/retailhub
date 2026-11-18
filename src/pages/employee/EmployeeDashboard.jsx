@@ -8,7 +8,7 @@ import {
   ArrowRight
 } from 'lucide-react'
 import { supabase } from '../../services/supabase'
-import StatCard from '../../components/statCard'
+import StatCard from '../../components/statcard'
 
 export default function EmployeeDashboard() {
   const [productCount, setProductCount] = useState(0)
