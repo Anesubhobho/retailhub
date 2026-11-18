@@ -10,6 +10,12 @@ import Suppliers from './pages/owner/Suppliers'
 import Products from './pages/owner/Products'
 import ReceiveStock from './pages/employee/ReceiveStock'
 import InventoryPage from './pages/shared/InventoryPage'
+import POS from './pages/employee/POS'
+import SalesHistory from './pages/shared/SalesHistory'
+import ExpenseManagement from './pages/owner/ExpenseManagement'
+import FinancialDashboard from './pages/owner/FinancialDashboard'
+import SalesAnalytics from './pages/owner/SalesAnalytics'
+import Reports from './pages/owner/Reports'
 
 function LoadingScreen() {
   return (
@@ -80,20 +86,23 @@ function AppRoutes() {
           <Route path="suppliers" element={<Suppliers />} />
           <Route path="employees" element={<PlaceholderPage title="Employees" />} />
           <Route path="inventory" element={<InventoryPage />} />
-          <Route path="analytics" element={<PlaceholderPage title="Sales Analytics" />} />
-          <Route path="reports" element={<PlaceholderPage title="Reports" />} />
+         <Route path="analytics" element={<SalesAnalytics />} />
+         <Route path="financials" element={<FinancialDashboard />} />
           <Route path="devices" element={<PlaceholderPage title="Devices & Synchronisation" />} />
           <Route path="settings" element={<PlaceholderPage title="Settings" />} />
+          <Route path="sales" element={<SalesHistory />} />
+          <Route path="expenses" element={<ExpenseManagement />} />
+          <Route path="reports" element={<Reports />} />
         </Route>
       </Route>
 
       <Route element={<ProtectedRoute role="employee" />}>
         <Route path="/employee" element={<DashboardLayout />}>
           <Route index element={<EmployeeDashboard />} />
-          <Route path="pos" element={<PlaceholderPage title="Point of Sale" />} />
+          <Route path="pos" element={<POS />} />
           <Route path="receive-stock" element={<ReceiveStock />} />
           <Route path="stock" element={<InventoryPage />} />
-          <Route path="sales" element={<PlaceholderPage title="Sales History" />} />
+          <Route path="sales" element={<SalesHistory />} />
         </Route>
       </Route>
 

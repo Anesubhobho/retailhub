@@ -14,7 +14,8 @@ import {
   LogOut,
   Menu,
   X,
-  RefreshCw
+  RefreshCw,
+  Wallet
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 
@@ -28,7 +29,9 @@ const ownerLinks = [
   { name: 'Sales Analytics', path: '/owner/analytics', icon: BarChart3 },
   { name: 'Reports', path: '/owner/reports', icon: ClipboardList },
   { name: 'Devices & Sync', path: '/owner/devices', icon: RefreshCw },
-  { name: 'Settings', path: '/owner/settings', icon: Settings }
+  { name: 'Settings', path: '/owner/settings', icon: Settings },
+  { name: 'Sales History', path: '/owner/sales', icon: BarChart3 },
+  { name: 'Expenses', path: '/owner/expenses', icon: Wallet }
 ]
 
 const employeeLinks = [
@@ -62,10 +65,11 @@ export default function DashboardLayout() {
         />
       )}
 
-      <aside className={`fixed inset-y-0 left-0 z-50 flex w-64 flex-col bg-slate-950 text-white transition-transform duration-200
+      <aside
+        className={`fixed inset-y-0 left-0 z-50 flex w-64 flex-col bg-slate-950 text-white transition-transform duration-200
         ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0`}>
-
+        lg:translate-x-0`}
+      >
         <div className="flex h-20 items-center justify-between border-b border-white/10 px-6">
           <div>
             <h1 className="text-2xl font-bold tracking-tight">
